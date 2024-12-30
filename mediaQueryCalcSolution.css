@@ -1,0 +1,28 @@
+/* mediaQueryCalcSolution.css */
+
+.container {
+  width: 100%;
+  padding-left: 20px; /* Instead of calc() use padding */
+  padding-right: 20px;
+  box-sizing: border-box; /* To prevent extra width caused by padding*/
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 10px; /* Adjust padding for smaller screen */
+    padding-right: 10px;
+  }
+}
+
+/* alternative solution using margin */
+.container-margin {
+  width: calc(100% + 40px); /*add the total margin to 100% */
+  margin-left: -20px;
+  margin-right: -20px;
+}
+@media (max-width: 768px) {
+  .container-margin {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
